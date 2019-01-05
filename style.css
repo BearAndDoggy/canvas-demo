@@ -1,0 +1,21 @@
+#canvas {
+    background:green;
+    display: block;
+}
+body {
+    margin: 0;
+}
+#paint {
+    display: none;
+}
+.tools {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+.show {
+    display: inline-block !important;
+}
+.hide {
+    display: none;
+}
