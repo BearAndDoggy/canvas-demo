@@ -129,7 +129,7 @@ function listenToUser(context) {
             var y = event.touches[0].clientY
             user = true
             if (eraserCanUse) {
-                context.clearRect(x - 5, y - 5, 10, 10)
+                context.clearRect(x - 5, y - 5, 15, 15)
             } else {
                 lastpoint = {
                     'x': x,
@@ -146,7 +146,7 @@ function listenToUser(context) {
                 return
             }
             if (eraserCanUse) {
-                context.clearRect(x, y, 10, 10)
+                context.clearRect(x, y, 15, 15)
             } else {
                 var newpoint = {
                     x: x,
@@ -166,7 +166,7 @@ function listenToUser(context) {
             var y = event.clientY
             user = true
             if (eraserCanUse) {
-                context.clearRect(x - 5, y - 5, 10, 10)
+                context.clearRect(x - 5, y - 5, 15, 15)
             } else {
                 lastpoint = {
                     'x': x,
@@ -183,7 +183,7 @@ function listenToUser(context) {
                 return
             }
             if (eraserCanUse) {
-                context.clearRect(x, y, 10, 10)
+                context.clearRect(x, y, 15, 15)
             } else {
                 var newpoint = {
                     x: x,
