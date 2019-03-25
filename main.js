@@ -41,6 +41,12 @@ function drawLine(x, y, x1, y1) {
     context.stroke();
 }
 
+function drawCricle(x, y, radius) {
+    context.beginPath();
+    context.arc(x, y, radius, 0, 2 * Math.PI);
+    context.fill();
+}
+
 function onlick() {
     eraser.onclick = function () {
         eraserCanUse = true
@@ -152,6 +158,7 @@ function listenToUser(context) {
                     x: x,
                     y: y,
                 }
+                drawCricle(x, y, lineWidth / 2.2)
                 drawLine(lastpoint.x, lastpoint.y, newpoint.x, newpoint.y)
                 lastpoint = newpoint
             }
@@ -189,6 +196,7 @@ function listenToUser(context) {
                     x: x,
                     y: y,
                 }
+                drawCricle(x, y, lineWidth / 2.2)
                 drawLine(lastpoint.x, lastpoint.y, newpoint.x, newpoint.y)
                 lastpoint = newpoint
             }
