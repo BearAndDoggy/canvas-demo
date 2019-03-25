@@ -54,64 +54,64 @@ function onlick() {
         eraser.classList.remove('active')
     }
 
-    red.onclick = function() {
+    red.onclick = function () {
         context.strokeStyle = 'red'
         red.classList.add('colorActive')
         black.classList.remove('colorActive')
         green.classList.remove('colorActive')
         blue.classList.remove('colorActive')
     }
-    
-    black.onclick = function() {
+
+    black.onclick = function () {
         context.strokeStyle = 'black'
         black.classList.add('colorActive')
         red.classList.remove('colorActive')
         green.classList.remove('colorActive')
         blue.classList.remove('colorActive')
-    } 
+    }
 
-    green.onclick = function() {
+    green.onclick = function () {
         context.strokeStyle = 'green'
         green.classList.add('colorActive')
         black.classList.remove('colorActive')
         red.classList.remove('colorActive')
         blue.classList.remove('colorActive')
     }
-    
-    blue.onclick = function() {
+
+    blue.onclick = function () {
         context.strokeStyle = 'blue'
         blue.classList.add('colorActive')
         black.classList.remove('colorActive')
         green.classList.remove('colorActive')
         red.classList.remove('colorActive')
-    } 
+    }
 
-    thin.onclick = function() {
+    thin.onclick = function () {
         thin.classList.add('lineActive')
         medium.classList.remove('lineActive')
         thick.classList.remove('lineActive')
         lineWidth = 3
     }
 
-    medium.onclick = function() {
+    medium.onclick = function () {
         medium.classList.add('lineActive')
         thin.classList.remove('lineActive')
         thick.classList.remove('lineActive')
         lineWidth = 5
     }
 
-    thick.onclick = function() {
+    thick.onclick = function () {
         thick.classList.add('lineActive')
         medium.classList.remove('lineActive')
         thin.classList.remove('lineActive')
         lineWidth = 8
     }
 
-    clear.onclick = function() {
+    clear.onclick = function () {
         context.clearRect(0, 0, canvas.width, canvas.height)
     }
 
-    download.onclick = function() {
+    download.onclick = function () {
         var a = document.createElement('a')
         a.download = '我的画'
         a.target = '_blank'
@@ -129,7 +129,7 @@ function listenToUser(context) {
             var y = event.touches[0].clientY
             user = true
             if (eraserCanUse) {
-                context.clearRect(x - 5, y - 5, 15, 15)
+                context.clearRect(x - 7.5, y - 7.5, 15, 15)
             } else {
                 lastpoint = {
                     'x': x,
@@ -137,11 +137,11 @@ function listenToUser(context) {
                 }
             }
         }
-    
+
         canvas.ontouchmove = function (event) {
             var x = event.touches[0].clientX
             var y = event.touches[0].clientY
-    
+
             if (!user) {
                 return
             }
@@ -156,7 +156,7 @@ function listenToUser(context) {
                 lastpoint = newpoint
             }
         }
-    
+
         canvas.ontouchend = function () {
             user = false
         }
@@ -174,11 +174,11 @@ function listenToUser(context) {
                 }
             }
         }
-    
+
         canvas.onmousemove = function (event) {
             var x = event.clientX
             var y = event.clientY
-    
+
             if (!user) {
                 return
             }
@@ -193,9 +193,10 @@ function listenToUser(context) {
                 lastpoint = newpoint
             }
         }
-    
+
         canvas.onmouseup = function () {
             user = false
         }
     }
 }
+
