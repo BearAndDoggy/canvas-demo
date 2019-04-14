@@ -152,7 +152,7 @@ function listenToUser(context) {
                 return
             }
             if (eraserCanUse) {
-                context.clearRect(x, y, 15, 15)
+                context.clearRect(x -5, y-5, 15, 15)
             } else {
                 var newpoint = {
                     x: x,
