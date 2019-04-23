@@ -62,6 +62,7 @@ function onlick() {
 
     red.onclick = function () {
         context.strokeStyle = 'red'
+        context.fillStyle = 'red'
         red.classList.add('colorActive')
         black.classList.remove('colorActive')
         green.classList.remove('colorActive')
@@ -70,6 +71,7 @@ function onlick() {
 
     black.onclick = function () {
         context.strokeStyle = 'black'
+        context.fillStyle = 'black'
         black.classList.add('colorActive')
         red.classList.remove('colorActive')
         green.classList.remove('colorActive')
@@ -78,6 +80,7 @@ function onlick() {
 
     green.onclick = function () {
         context.strokeStyle = 'green'
+        context.fillStyle = 'green'
         green.classList.add('colorActive')
         black.classList.remove('colorActive')
         red.classList.remove('colorActive')
@@ -86,6 +89,7 @@ function onlick() {
 
     blue.onclick = function () {
         context.strokeStyle = 'blue'
+        context.fillStyle = 'blue'
         blue.classList.add('colorActive')
         black.classList.remove('colorActive')
         green.classList.remove('colorActive')
